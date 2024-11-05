@@ -1,0 +1,119 @@
+/*Geral*/
+
+:root{
+    --main-color: #d92123; /*variável de cor que pode ser chamada no decorrer do projeto*/
+    --primary-text-color: #fff;
+    --secondary-text-color : #191919;
+    --secundary-color: #868686;
+    --tertuary-color: #eff3f4;
+}
+
+*{
+    font-family: "Lato";
+    padding: 0; /*espaçamento interno*/
+    margin: 0; /*espaçamento externo*/
+    box-sizing: border-box; /*padroniza elementos que passam da larguma máxima do elemento pai*/
+}
+
+a{
+    text-decoration: none; /*tirar o underline de todos os links*/
+}
+
+img{
+    width: 100%; /*largura de 100% com relação ao elemento pai*/
+}
+
+input[type="submit"]{
+    cursor: pointer; /*quando passar com o cursor em cima do elemento aparece uma mãozinha*/
+}
+
+/*Cabeçalho e Banner*/
+#header{
+    min-height: 90vh; /*altura mínima*/
+    background-image: url("../IMG/main_banner4.png"); /*cor de fundo da imagem*/
+    background-size: cover; /*imagem ocupar a área que tem disposição pra ela*/
+    background-position: center; /*posiciona a imagem no centro*/
+    color: var(--primary-text-color);
+    margin-bottom: 2rem; /*espaçamento dos elementos inferiores para as imagens não ficarem grudadas na parte de baixo*/
+    position: relative;/*é aonde eu posso trabalhar dentro com elementos absolut*/
+}
+
+#inner-header{
+    display: flex; /*serve para que eu possa posicionar or elementos de uma maneira mais fácil*/
+    justify-content: space-between; /*dar espaçamento entre os elementos*/
+    align-items: center;/*centralizar os itens*/
+}
+
+#brand{
+    background-color: var(--main-color);
+    padding: 1rem;/*o padding é para dar espaçamento interno*/
+    
+}
+
+#navbar{
+    display: flex;
+    gap: 2rem; /*deixar um espaçamento de 2 rem entre os itens do navegador*/
+    text-transform: uppercase; /*deixar o texto em caixa alta*/
+    margin-right: 2rem; /*deixar um espaçamento para que o último elemento não fique tão perto da extremidade*/
+
+}
+
+#navbar a {
+    color: var(--primary-text-color);
+    font-weight: bold; /*negrito*/
+    padding: 1rem; /*espaçamento interno entre os elementos*/
+}
+
+.banner.active {
+    opacity: 1;
+  }
+  
+  .banner {
+    max-width: 50%; /*largura máxima até o meio da página*/
+    padding: 4rem; /*espaçamento interno*/
+    opacity: 1; /*1 aparece, 0 desaparece*/
+    position: absolute; /*posicionamento referenta ao ancestral anterior, se não houver ancestral, o posicionamento será com relação ao documento*/
+    transition: 0.6s; /*aparece e desaparece por 0.6 segundos*/
+  }
+  
+  .banner h2 {
+    font-size: 4rem; /*tamanho da fonte*/
+    margin-bottom: 1.2rem; /*magem inferior*/
+    position: relative; /*quer dizer que pode movimentar os elementos dentro da div*/
+    z-index: 2; /*o maior z index fica na frente*/
+  }
+  
+  .banner p {
+    font-size: 1.5rem;
+  }
+
+  .square {
+    display: block; /*quer dizer que é apenas um elemento decorativo*/
+    width: 150px; /*altura*/
+    height: 150px; /*largura*/
+    background-color: var(--main-color);
+    position: absolute;
+    z-index: 1; /*o menos z index fica atrás*/
+    left: 20px; /*com relação a margem ou elemento a esquerda*/
+    top: 40px; /*com relação a margem ou elemento acima*/
+  }
+
+  .dots {
+    display: flex;
+    gap: 2rem;
+    position: absolute; /*como o elemento pai está absolute, esse tb tem que ficar absolute, senão fica lé em cima*/
+    bottom: 3rem;
+    left: 3rem;
+  }
+
+  .dot {
+    width: 20px;
+    height: 20px;
+    background-color: var(--secundary-color);
+
+  }
+
+  .dot.active {
+    background-color: var(--main-color);
+  }
+  
